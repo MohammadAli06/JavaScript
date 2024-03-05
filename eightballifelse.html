@@ -1,0 +1,37 @@
+<script>
+var userName = prompt('Please enter your name');
+userName ? console.log(`Hello ${userName}`): console.log('Hello Stranger!');
+userName ? document.write(`Hello ${userName}<br>`): document.write('Hello Stranger!<br>');
+const userQuestion = prompt('Please enter your question');
+console.log(userQuestion);
+document.write(`${userName} asked... ${userQuestion}?<br>`);
+var randomNumber = Math.floor(Math.random() * 8);
+var eightBall = '';
+console.log(`The Magic Eight Balls answer is ${eightBall}`);
+document.write(`The Magic Eight Balls answer is... ${eightBall}`);
+if (randomNumber===0){
+   console.log('It is certain');
+   document.write('It is certain');
+  }else if (randomNumber===1){
+     console.log('It is decidedly so');
+     document.write('It is decidedly so');
+      }else if (randomNumber===2){
+         console.log('Reply hazy try again');
+         document.write('Reply hazy try again');
+        }else if (randomNumber===3){
+           console.log('Cannot predict now');
+           document.write('Cannot predict now');
+          }else if(randomNumber===4){
+             console.log('Do not count on it');
+             document.write('Do not count on it');
+            }else if(randomNumber===5){
+               console.log('My sources say no');
+               document.write('My Sources say no');
+              }else if(randomNumber===6){
+                 console.log('Outlook not so good');
+                 document.write('Outlook not so good');
+                }else  if(randomNumber===7){
+                   console.log('Signs point to say yes');
+                   document.write('Signs point to say yes');
+                }            
+</script>

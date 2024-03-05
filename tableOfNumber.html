@@ -1,0 +1,14 @@
+<h2>Enter the number of whose table you want <input type="number" id="tableOf"></h2>
+<h2>How many times? <input type="number" id="times"></h2>
+<input type="button" onclick="createTable()" value="Create Table">
+<script>
+    function createTable() {
+    var number = document.getElementById("tableOf");
+    var timesOutput = document.getElementById("times");
+    for (let i = 1; i <= timesOutput.value; i++) {
+        let multi = number.value * i;
+        document.write(`<h1>${number.value} X ${i} = ${multi}</h1>`);
+        
+      }
+}
+</script>
