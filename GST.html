@@ -1,0 +1,12 @@
+<script>
+    var cost= prompt("Please enter your cost price");
+    cost = parseInt (cost, 10);
+    var gstRate= prompt("Please enter your gst rate");
+    var gst = cost * (gstRate / 100);
+    let finalPrice = cost * gst;
+    finalPrice = cost + gst;
+    console.log(`GST of the item is ${gst}`);
+    console.log(`Final price is ${finalPrice}`);
+    document.write(`GST of the item is ${gst}`);
+    document.write(`Final price is ${finalPrice}`);
+</script>
