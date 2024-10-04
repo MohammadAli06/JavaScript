@@ -1,40 +1,107 @@
-/*In this project I built a Magic Eight Ball using control flow in JavaScript.
-A user's able to input a question, then the program will output a random fortune.*/
-<script>
- var userName = '';
- userName ? console.log(`Hello ${userName}!`):console.log('Hello!');
- let userQuestion = '';
- console.log(`${userName} asked... ${userQuestion} ?`);
- let randomNumber = Math.floor(Math.random()*8);
- let eightBall = '';
- switch(randomNumber){
-   case 0:
-    eightBall = 'It is certain';
-    break;
-   case 1:
-    eightBall = 'It is decidedly so';
-    break;
-   case 2:
-    eightBall = 'Reply hazy try again'
-    break;
-   case 3:
-    eightBall = 'Cannot predict now';
-    break;
-   case 4:
-    eightBall = 'Do not count on it';
-    break;
-   case 5:
-    eightBall = 'My sources say no';
-    break;
-   case 6:
-    eightBall = 'Outlook not so good';
-    break;
-   case 7:
-    eightBall = 'Signs point to yes';
-    break;
-    default:
-      console.log('You\'re unfortunate!');
-    break;
- }
- console.log(`The Magic Eight Ball\'s answer is... ${eightBall}`);
-</script>
+<!-- /*In this project I built a Magic Eight Ball using control flow in JavaScript.
+A user's able to input a question, then the program will output a random fortune.*/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic Eight Ball</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: 200px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #4a90e2;
+    }
+
+    p {
+      color: #333;
+      font-size: 18px;
+    }
+
+    .eightball-answer {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #e0f7fa;
+      border-radius: 8px;
+      color: #00796b;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .question {
+      color: #5c6bc0;
+      font-style: italic;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Magic Eight Ball</h1>
+    <p id="greeting"></p>
+    <p class="question" id="user-question"></p>
+    <div class="eightball-answer" id="eightball-answer"></div>
+  </div>
+
+  <script>
+    var userName = prompt("Enter your name");
+    let userQuestion = prompt("Enter your question");
+
+    let greetingText = userName ? `Hello, ${userName}!` : 'Hello!';
+    document.getElementById('greeting').innerHTML = greetingText;
+
+    let questionText = `${userName} asked... "${userQuestion}" ?`;
+    document.getElementById('user-question').innerHTML = questionText;
+
+    let randomNumber = Math.floor(Math.random() * 8);
+    let eightBall = '';
+    
+    switch (randomNumber) {
+      case 0:
+        eightBall = 'It is certain';
+        break;
+      case 1:
+        eightBall = 'It is decidedly so';
+        break;
+      case 2:
+        eightBall = 'Reply hazy, try again';
+        break;
+      case 3:
+        eightBall = 'Cannot predict now';
+        break;
+      case 4:
+        eightBall = 'Do not count on it';
+        break;
+      case 5:
+        eightBall = 'My sources say no';
+        break;
+      case 6:
+        eightBall = 'Outlook not so good';
+        break;
+      case 7:
+        eightBall = 'Signs point to yes';
+        break;
+      default:
+        eightBall = 'You are unfortunate!';
+        break;
+    }
+
+    document.getElementById('eightball-answer').innerHTML = `The Magic Eight Ball's answer is... "${eightBall}"`;
+  </script>
+
+</body>
+</html>
